@@ -1,0 +1,18 @@
+:root {
+
+  --color--black: #1a1a1a;
+  --color--white: #ffffff;
+  --color--grey: rgb(92, 92, 92);
+  --color--grey-light: rgb(158, 158, 158);
+  --color--pink: #DC598F;
+  --color--pink-light: rgba(255, 121, 143, 0.178);
+
+}
+
+* {
+  font-weight: 400;
+  font-family: Inter;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
