@@ -5,7 +5,7 @@ import Products from "../ui/Products"
 import ShopCarousel from "../ui/ShopCarousel"
 
 const StyledContainer = styled.main`
-    width:80vw;
+    width:86vw;
     margin: 2rem auto;
 
 

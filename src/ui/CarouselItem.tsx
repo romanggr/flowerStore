@@ -1,9 +1,11 @@
 import styled from "styled-components"
 
 const StyledContainer = styled.div`
+    margin-left:-6rem;
     position:relative;
-    width: clamp(4rem, 8rem, 10rem);
-    height: clamp(2rem, 8rem, 10rem);
+    width: 10vw;
+    height: 10vw;
+    cursor: pointer;
     
     & img{
         width:100%;
@@ -17,26 +19,35 @@ const StyledContainer = styled.div`
         transform: translate(-50%, -50%);
 
         color:white;
-        font-weight:600;
-        font-size:1.2rem;
+        font-weight:400;
+        font-size:1.8vw;
     }
 
-    @media (max-width: 440px) {
-        width:7rem;
-        height:7rem;
+    @media (max-width: 1000px) {
+        width: 15vw;
+        height: 15vw;
 
         & p{
-            font-weight:400;
-            font-size:1rem;
-        }
+            font-size:2.3vw;
+        }   
     }
 
-    @media (max-width: 500px) {
-        width:6rem;
-        height:6rem;
-    
+
+
+    @media (max-width: 650px) {
+        width: 28vw;
+        height: 28vw;
+        & p{
+            font-size:4.3vw;
+        }
     }
-   
+    /* @media (max-width: 650px) {
+        width: 28vw;
+        height: 28vw;
+        & p{
+            font-size:1.2rem;
+        }
+    } */
 `
 
 const CarouselItem = ({ name, image }: { name: string, image: string }) => {

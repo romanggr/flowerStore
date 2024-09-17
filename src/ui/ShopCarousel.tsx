@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 const CarouselContainer = styled.div`
   position:relative;
   width: 100%;
-  margin:0 auto 8rem;
+  margin:0 auto 4rem;
   border-radius:3rem;
 `;
 

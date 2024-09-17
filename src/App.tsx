@@ -22,14 +22,15 @@ const App = () => {
           <Route path='locations' element={<Locations />} />
           <Route path='orders' element={<Orders />} />
           <Route path='blog' element={<Blog />} />
-          <Route path='basket' element={<Basket />} />
           <Route path="*" element={<ErrorPage content={"This web page doesn't exist"} />} />
+
+          <Route path='basket' element={<Basket />} />
 
           <Route path='/registration' element={<Registration />} />
           <Route path='/login' element={<Login />} />
 
-
         </Route>
+
 
 
       </Routes>

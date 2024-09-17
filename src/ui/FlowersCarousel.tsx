@@ -3,13 +3,7 @@ import CarouselItem from "./CarouselItem";
 import Slider from "react-slick";
 
 const CarouselContainer = styled.div`
-  padding: 0.5rem 0;
-  height: 9rem;
 
-  @media (max-width:768px) {
-    margin:-3rem 0 0;
-  }
- 
 `;
 
 const data = [
@@ -65,31 +59,19 @@ const FlowersCarousel = () => {
         centerMode: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 8,
+        slidesToShow: 7,
         swipeToSlide: true,
         arrows: false,
         centerPadding: "10px",
         responsive: [
             {
-                breakpoint: 1400,
-                settings: {
-                    slidesToShow: 6,
-                }
-            },
-            {
-                breakpoint: 1024,
+                breakpoint: 1000,
                 settings: {
                     slidesToShow: 5,
                 }
             },
             {
-                breakpoint: 890,
-                settings: {
-                    slidesToShow: 4,
-                }
-            },
-            {
-                breakpoint: 565,
+                breakpoint: 650,
                 settings: {
                     slidesToShow: 3,
                 }

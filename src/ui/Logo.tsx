@@ -9,7 +9,7 @@ const StyledLogo = styled.h2`
         font-weight:500;
 
 
-        @media (max-width:510px) {
+        @media (max-width:500px) {
         font-size:1.5rem;
 
         & img{

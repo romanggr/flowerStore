@@ -1,68 +1,21 @@
 import styled from "styled-components"
-import { CiFilter } from "react-icons/ci";
-import { IoMdClose } from "react-icons/io";
 import ProductsItem from "./ProductsItem";
+import Filter from "./Filter";
 
 const StyledContainer = styled.div`
-    margin: 5rem 1rem;
+    margin: 3rem 1rem 5rem;
     display:flex;
     gap:2rem;
     align-items:flex-start;
 
+
+
     @media (max-width: 768px) {
         margin-top:3rem;
         flex-direction:column;
-        align-items:center;
+        align-items:flex-start;
+        
     }
-`
-
-const StyledFilter = styled.div`
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:1rem;
-    
-    &>button{
-        color: var(--color--white);
-        transition:0.2s ease;
-    }
-
-    @media (max-width: 768px) {
-        flex-direction:row;
-    }
-`
-
-const FilterBtn = styled.button`
-    background-color:var(--color--pink);
-    border:3px solid var(--color--pink);
-    border-radius:40%;
-    font-size:2rem;
-    padding:0.8rem 0.8rem 0.5rem;
-    
-    
-    &:hover{
-        background-color:var(--color--pink-light);
-        color:var(--color--pink);
-           
-        }
-
-    @media (max-width:550px) {
-    padding:0.5rem 0.5rem 0.2rem;
-       
-    }
-`
-const CloseBtn = styled.button`
-    padding:0.3rem 0.4rem;
-    border:3px solid #D21C2E;
-    background-color:#D21C2E;
-    border-radius:50%;
-    font-size: 1rem;
-
-    &:hover{
-        background-color:#d21c2e3e;
-        color:#D21C2E;
-        }
-
 `
 
 const StyledProducts = styled.div`
@@ -77,6 +30,7 @@ const StyledProducts = styled.div`
 
     
 `
+
 const productsData = [
     { image: "product.png", name: "A thousand arrows of the Cupid", price: 29.99, discount: 15, id: 1 },
     { image: "product.png", name: "A thousand arrows of the Cupid", price: 49.99, discount: null, id: 2 },
@@ -96,24 +50,18 @@ const productsData = [
 ];
 
 
-
-
 const Products = () => {
+
+
     return (
         <StyledContainer>
-            <StyledFilter>
-                <FilterBtn>
-                    <CiFilter />
-                </FilterBtn>
-                <CloseBtn>
-                    <IoMdClose />
-                </CloseBtn>
-            </StyledFilter>
+            <Filter />
             <StyledProducts>
                 {productsData.map(item => <ProductsItem key={item.id} id={item.id} discount={item.discount} image={item.image} name={item.name} price={item.price} />)}
             </StyledProducts>
-        </StyledContainer>
+        </StyledContainer >
     )
 }
 
 export default Products
+
